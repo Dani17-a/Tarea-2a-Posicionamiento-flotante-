@@ -1,0 +1,121 @@
+/* Define el aspecto general de la página y evita márgenes añadidos por el navegador. */
+body {
+    /* Usa una tipografía sencilla, similar a la de la imagen de referencia. */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Elimina el margen exterior predeterminado del documento. */
+    margin: 0;
+    /* Mantiene el fondo exterior blanco alrededor de la zona azul. */
+    background-color: #ffffff;
+}
+
+/* Crea la franja azul clara que sirve de fondo al artículo. */
+.zona {
+    /* Extiende el fondo azul por toda la ventana. */
+    width: 100%;
+    margin-left: 0;
+    /* Añade un pequeño espacio entre el borde azul y el panel interior. */
+    padding: 5px;
+    /* Incluye el relleno dentro del ancho indicado. */
+    box-sizing: border-box;
+    /* Hace que el fondo azul cubra al menos toda la altura visible. */
+    min-height: 100vh;
+    /* Aplica el color azul claro de la zona exterior. */
+    background-color: lightblue;
+}
+
+/* Da forma al panel claro y centra su columna dentro de la franja azul. */
+.contenido {
+    /* Mantiene el ancho y la posición del panel de la imagen de referencia. */
+    width: 80%;
+    max-width: 1200px;
+    /* Separa el texto del borde del panel. */
+    padding: 14px;
+    /* Deja un margen izquierdo para que el panel no quede centrado. */
+    margin: 0 0 0 5vw;
+    /* Dibuja el borde fino amarillo verdoso del panel. */
+    border: 1px solid #d8e900;
+    /* Incluye borde y relleno dentro del ancho calculado. */
+    box-sizing: content-box;
+    /* Aplica el fondo crema claro de la referencia. */
+    background-color: #ffffe0;
+    min-height: 82vw;
+
+}
+
+/* Ajusta el título principal para que destaque sin dominar la columna. */
+h1 {
+    /* Reduce el espacio superior e inferior del encabezado. */
+    margin: 12px 0 14px;
+    /* Usa un tamaño cercano al del título de la imagen. */
+    font-size: 22px;
+    /* Mantiene el título en negrita. */
+    font-weight: bold;
+}
+
+/* Mantiene los párrafos compactos como en el ejemplo. */
+p {
+    /* Evita que el texto sea demasiado grande para la columna estrecha. */
+    font-size: 12px;
+    /* Ajusta la altura de línea para que el texto sea legible y compacto. */
+    line-height: 1.18;
+    /* Añade un espacio moderado entre párrafos. */
+    margin: 8px 0;
+    /* Justifica el texto para aproximarse a la imagen de referencia. */
+    text-align: justify;
+}
+
+/* Coloca la primera fotografía a la izquierda y deja que el texto la rodee. */
+.contenido img:first-of-type {
+    /* Hace que los primeros párrafos fluyan por el lado derecho de la imagen. */
+    float: left;
+    /* Ocupa algo más de un tercio para dejar sitio al texto a su derecha. */
+    width: 36%;
+    /* Conserva las proporciones originales de la fotografía. */
+    height: auto;
+    /* Separa ligeramente el texto del borde derecho de la fotografía. */
+    margin: 0 7px 5px 0;
+}
+
+/* Separa el apartado de historia del contenido que rodea la primera foto. */
+h2 {
+    /* Evita que el encabezado quede al lado de la imagen flotante. */
+    clear: both;
+    /* Ajusta los espacios alrededor del subtítulo. */
+    margin: 14px 0;
+    /* Da al subtítulo un tamaño menor que el título principal. */
+    font-size: 16px;
+    /* Resalta el subtítulo en negrita. */
+    font-weight: bold;
+}
+
+/* Hace que la segunda fotografía ocupe todo el ancho interior del panel. */
+.contenido>img:nth-of-type(2) {
+    float: right;
+    /* Coloca la fotografía en una línea propia. */
+    display: block;
+    /* Elimina cualquier resto de flotación de la imagen anterior. */
+    clear: both;
+    /* Deja espacio a la izquierda para que el último párrafo la rodee. */
+    width: 60%;
+    /* Conserva las proporciones originales de la fotografía. */
+    height: auto;
+    /* Deja un pequeño espacio antes y después de la imagen. */
+    margin: 0px 5px 0;
+
+}
+
+/* Reduce los márgenes de los encabezados en ventanas muy estrechas. */
+@media (max-width: 480px) {
+
+    /* Evita que la zona azul se estreche demasiado por su margen izquierdo. */
+    .zona {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* Ajusta el título para que quepa en una columna móvil. */
+    h1 {
+        /* Reduce ligeramente el tamaño del encabezado principal. */
+        font-size: 20px;
+    }
+}
